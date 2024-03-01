@@ -9,11 +9,13 @@ use WPZephyr\Exceptions\ApplicationException;
 
 /**
  * Application.
+
  */
 class Application
 {
-    use HasContainerTrait;
-    use LoadServiceProvidersTrait;
+    use HasAliasesTrait,
+        HasContainerTrait,
+        LoadServiceProvidersTrait;
 
     /**
      * Indicates if the application has been bootstrapped.
@@ -37,11 +39,11 @@ class Application
     /**
      * Make a new application.
      *
-     * @return static
+     * @return self
      */
-    public static function make(): static
+    public static function make(): self
     {
-        return new static(new Container());
+        return new self(new Container());
     }
 
     /**

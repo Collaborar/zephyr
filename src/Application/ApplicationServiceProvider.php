@@ -21,6 +21,9 @@ class ApplicationServiceProvider implements ServiceProviderInterface
     public function register(Container $container): void
     {
         $this->extendConfig($container, 'providers', []);
+
+        $app = $container->get(Application::class);
+        $app->alias('app', Application::class);
     }
 
     /**

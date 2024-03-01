@@ -33,9 +33,9 @@ trait HasContainerTrait
     /**
      * Retrieves the container.
      *
-     * @return Container|null
+     * @return Container
      */
-    public function container(): ?Container
+    public function container(): Container
     {
         return $this->container;
     }

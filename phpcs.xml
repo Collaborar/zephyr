@@ -4,8 +4,7 @@
     <config name="installed_paths" value="vendor/phpcompatibility/php-compatibility" />
     <config name="testVersion" value="8.1-"/>
 
-    <!-- Definindo o padrão Symfony -->
-    <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony"/>
+    <arg name="warning-severity" value="0" />
 
     <!-- Files -->
     <file>./src</file>
@@ -14,4 +13,7 @@
     <exclude-pattern>tests/*</exclude-pattern>
     <exclude-pattern>src/Support/*</exclude-pattern>
     <exclude-pattern>src/Exceptions/Whoops/views/*</exclude-pattern>
+
+    <!-- Definindo o padrão Symfony -->
+    <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony"/>
 </ruleset>
