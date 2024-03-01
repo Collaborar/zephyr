@@ -1,2 +1,5 @@
 # Composer
 /vendor/
+
+# tools
+.php-cs-fixer.cache
