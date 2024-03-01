@@ -8,7 +8,7 @@
     <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony"/>
 
     <!-- Files -->
-    <file>./src</file>E
+    <file>./src</file>
     <file>./config.php</file>
 
     <exclude-pattern>tests/*</exclude-pattern>
