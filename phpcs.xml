@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="WPZephyr">
+    <description>WPZephyr Coding Standard</description>
+    <config name="installed_paths" value="vendor/phpcompatibility/php-compatibility" />
+    <config name="testVersion" value="8.1-"/>
+
+    <!-- Definindo o padrão Symfony -->
+    <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony"/>
+
+    <!-- Files -->
+    <file>./src</file>E
+    <file>./config.php</file>
+
+    <exclude-pattern>tests/*</exclude-pattern>
+    <exclude-pattern>src/Support/*</exclude-pattern>
+    <exclude-pattern>src/Exceptions/Whoops/views/*</exclude-pattern>
+</ruleset>

@@ -27,6 +27,7 @@ trait LoadServiceProvidersTrait
      * Load Service Providers.
      *
      * @param Container $container
+     *
      * @return void
      */
     protected function loadProviders(Container $container): void
@@ -43,16 +44,18 @@ trait LoadServiceProvidersTrait
         $serviceProviders = array_map(
             static function (string $provider) use ($container) {
                 if (!is_subclass_of($provider, ServiceProviderInterface::class)) {
-                    throw new ApplicationException(
-                        'The following class is not defined or does not implement ' .
-                        ServiceProviderInterface::class . ': ' . $provider
-                    );
+                    throw new ApplicationException(sprintf(
+                        'The following class is not defined or does not implement `%s`: %s',
+                        ServiceProviderInterface::class,
+                        $provider
+                    ));
                 }
 
                 // Provide container access to the service provider instance
                 // so bootstrap hooks can be unhooked e.g.:
                 // remove_action( 'some_action', [\App::resolve( SomeServiceProvider::class ), 'methodAddedToAction'] );
                 $container->set($provider, new $provider());
+
                 return $container->get($provider);
             },
             $container->get(WPZEPHYR_SERVICE_PROVIDERS_KEY)
@@ -65,8 +68,9 @@ trait LoadServiceProvidersTrait
     /**
      * Execute register throught service providers.
      *
-     * @param array $serviceProviders
+     * @param array     $serviceProviders
      * @param Container $container
+     *
      * @return void
      */
     protected function execRegister(array $serviceProviders, Container $container): void
@@ -79,8 +83,9 @@ trait LoadServiceProvidersTrait
     /**
      * Execute bootstrap throught service providers.
      *
-     * @param array $serviceProviders
+     * @param array     $serviceProviders
      * @param Container $container
+     *
      * @return void
      */
     protected function execBootstrap(array $serviceProviders, Container $container): void

@@ -7,6 +7,9 @@ namespace WPZephyr\Application;
 use DI\Container;
 use WPZephyr\Exceptions\ApplicationException;
 
+/**
+ * Application.
+ */
 class Application
 {
     use HasContainerTrait;
@@ -19,6 +22,11 @@ class Application
      */
     protected bool $bootstrapped = false;
 
+    /**
+     * Constructor.
+     *
+     * @param Container $container
+     */
     public function __construct(Container $container)
     {
         $this->setContainer($container);
@@ -36,12 +44,17 @@ class Application
         return new static(new Container());
     }
 
+    /**
+     * Bootstrap the application.
+     *
+     * @param array $config
+     *
+     * @return void
+     */
     public function bootstrap(array $config = []): void
     {
         if ($this->isBootstrapped()) {
-            throw new ApplicationException(
-                static::class . ' already bootstrapped.'
-            );
+            throw new ApplicationException(sprintf('%s already bootstrapped.', static::class));
         }
 
         $this->bootstrapped = true;

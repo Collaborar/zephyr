@@ -6,6 +6,9 @@ namespace WPZephyr\Exceptions;
 
 use Exception as PhpException;
 
+/**
+ * Generic Exception
+ */
 class Exception extends PhpException
 {
 }

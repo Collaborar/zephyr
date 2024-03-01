@@ -8,21 +8,24 @@ use DI\Container;
 use WPZephyr\ServiceProviders\ExtendsConfigTrait;
 use WPZephyr\ServiceProviders\ServiceProviderInterface;
 
+/**
+ * Application Service Provider.
+ */
 class ApplicationServiceProvider implements ServiceProviderInterface
 {
     use ExtendsConfigTrait;
 
     /**
-	 * {@inheritDoc}
-	 */
+     * {@inheritDoc}
+     */
     public function register(Container $container): void
     {
         $this->extendConfig($container, 'providers', []);
     }
 
     /**
-	 * {@inheritDoc}
-	 */
+     * {@inheritDoc}
+     */
     public function bootstrap(Container $container): void
     {
         // Nothing to bootstrap.

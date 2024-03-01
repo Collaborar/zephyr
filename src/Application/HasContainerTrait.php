@@ -6,6 +6,9 @@ namespace WPZephyr\Application;
 
 use DI\Container;
 
+/**
+ * Allows use Dependency Injection.
+ */
 trait HasContainerTrait
 {
     /**
@@ -19,6 +22,7 @@ trait HasContainerTrait
      * Define the container.
      *
      * @param Container|null $container
+     *
      * @return void
      */
     public function setContainer(?Container $container): void
@@ -40,6 +44,7 @@ trait HasContainerTrait
      * Resolve dependency from container.
      *
      * @param string $key
+     *
      * @return mixed
      */
     public function resolve(string $key): mixed

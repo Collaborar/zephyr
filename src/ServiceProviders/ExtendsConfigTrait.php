@@ -20,25 +20,26 @@ trait ExtendsConfigTrait
      *
      * @param  mixed $default
      * @param  mixed $config
+     *
      * @return mixed
      */
     protected function replaceConfig(mixed $default, mixed $config): mixed
     {
-        if (! is_array($default) || ! is_array($config)) {
+        if (!is_array($default) || !is_array($config)) {
             return $config;
         }
 
-        $default_is_indexed = array_keys($default) === range(0, count($default) - 1);
-        $config_is_indexed = array_keys($config) === range(0, count($config) - 1);
+        $defaultIsIndexed = array_keys($default) === range(0, count($default) - 1);
+        $configIsIndexed = array_keys($config) === range(0, count($config) - 1);
 
-        if ($default_is_indexed && $config_is_indexed) {
+        if ($defaultIsIndexed && $configIsIndexed) {
             return $config;
         }
 
         $result = $default;
 
         foreach ($config as $key => $value) {
-            $result[ $key ] = $this->replaceConfig(Arr::get($default, $key), $value);
+            $result[$key] = $this->replaceConfig(Arr::get($default, $key), $value);
         }
 
         return $result;
@@ -50,6 +51,7 @@ trait ExtendsConfigTrait
      * @param  Container $container
      * @param  string    $key
      * @param  mixed     $default
+     *
      * @return void
      */
     public function extendConfig(Container $container, string $key, mixed $default): void

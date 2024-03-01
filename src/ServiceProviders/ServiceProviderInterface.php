@@ -15,6 +15,7 @@ interface ServiceProviderInterface
      * Register dependencies into container.
      *
      * @param Container $container
+     *
      * @return void
      */
     public function register(Container $container): void;
@@ -23,6 +24,7 @@ interface ServiceProviderInterface
      * Bootstrap anything if needed.
      *
      * @param Container $container
+     *
      * @return void
      */
     public function bootstrap(Container $container): void;
