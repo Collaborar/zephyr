@@ -1,6 +1,6 @@
 <?php
 // psalm-shepherd-disable
-namespace WPZephyr\Support;
+namespace Zephyr\Support;
 
 use ArrayAccess;
 

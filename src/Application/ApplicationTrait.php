@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\Application;
+namespace Zephyr\Application;
 
-use WPZephyr\Exceptions\ApplicationException;
+use Zephyr\Exceptions\ApplicationException;
 
 /**
  * Provide static access to an application instance.

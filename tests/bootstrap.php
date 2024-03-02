@@ -1,10 +1,10 @@
 <?php
 
-class WPZephyrTestsBootstrap {
+class ZephyrTestsBootstrap {
 	/**
 	 * The bootstrap instance.
 	 *
-	 * @var WPZephyrTestsBootstrap
+	 * @var ZephyrTestsBootstrap
 	 */
 	protected static $instance = null;
 
@@ -53,7 +53,7 @@ class WPZephyrTestsBootstrap {
 	/**
 	 * Get the single tests boostrap instance
 	 *
-	 * @return WPZephyrTestsBootstrap
+	 * @return ZephyrTestsBootstrap
 	 */
 	public static function instance() {
 		if ( static::$instance === null ) {
@@ -64,4 +64,4 @@ class WPZephyrTestsBootstrap {
 	}
 }
 
-WPZephyrTestsBootstrap::instance();
+ZephyrTestsBootstrap::instance();

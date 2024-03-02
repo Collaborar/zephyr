@@ -11,7 +11,7 @@
 	cacheDirectory=".phpunit.cache"
 >
 	<testsuites>
-		<testsuite name="WPZephyr Test Suite">
+		<testsuite name="Zephyr Test Suite">
 			<directory suffix=".php">./tests/unit-tests/</directory>
 		</testsuite>
 	</testsuites>

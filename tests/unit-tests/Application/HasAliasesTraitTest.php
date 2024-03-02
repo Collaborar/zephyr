@@ -1,10 +1,10 @@
 <?php
 
-namespace WPZephyrTests\Application;
+namespace ZephyrTests\Application;
 
 use Mockery;
-use WPZephyr\Application\HasAliasesTrait;
-use WPZephyrTestTools\TestCase;
+use Zephyr\Application\HasAliasesTrait;
+use ZephyrTestTools\TestCase;
 
 class HasAliasesTraitTest extends TestCase
 {
@@ -50,7 +50,7 @@ class HasAliasesTraitTest extends TestCase
     {
         $alias = 'test';
         $serviceKey = 'test_service';
-        $service = new \WPZephyrTestTools\TestService();
+        $service = new \ZephyrTestTools\TestService();
 
         $this->resolver->shouldReceive('resolve')
             ->with($serviceKey)
@@ -68,7 +68,7 @@ class HasAliasesTraitTest extends TestCase
     {
         $alias = 'test';
         $serviceKey = 'test_service';
-        $service = new \WPZephyrTestTools\TestService();
+        $service = new \ZephyrTestTools\TestService();
 
         $this->resolver->shouldReceive('resolve')
             ->with($serviceKey)

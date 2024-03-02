@@ -48,7 +48,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WPZephyr\\": "src/"
+            "Zephyr\\": "src/"
         },
         "files": [
             "config.php"
@@ -56,8 +56,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "WPZephyrTests\\": "tests/unit-tests",
-			"WPZephyrTestTools\\": "tests/tools"
+            "ZephyrTests\\": "tests/unit-tests",
+			"ZephyrTestTools\\": "tests/tools"
         }
     },
     "config": {

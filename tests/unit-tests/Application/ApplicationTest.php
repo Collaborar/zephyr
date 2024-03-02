@@ -1,14 +1,14 @@
 <?php
 
-namespace WPZephyrTests\Application;
+namespace ZephyrTests\Application;
 
 use Mockery;
 use DI\Container;
 use DI\NotFoundException;
-use WPZephyr\Application\Application;
-use WPZephyr\Exceptions\ApplicationException;
-use WPZephyr\ServiceProviders\ServiceProviderInterface;
-use WPZephyrTestTools\TestCase;
+use Zephyr\Application\Application;
+use Zephyr\Exceptions\ApplicationException;
+use Zephyr\ServiceProviders\ServiceProviderInterface;
+use ZephyrTestTools\TestCase;
 
 class ApplicationTest extends TestCase
 {

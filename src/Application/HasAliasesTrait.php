@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\Application;
+namespace Zephyr\Application;
 
 use BadMethodCallException;
 use Closure;
-use WPZephyr\Support\Arr;
+use Zephyr\Support\Arr;
 
 /**
  * Add methods to classes at runtime.

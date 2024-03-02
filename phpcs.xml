@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="WPZephyr">
-    <description>WPZephyr Coding Standard</description>
+<ruleset name="Zephyr">
+    <description>Zephyr Coding Standard</description>
     <config name="installed_paths" value="vendor/phpcompatibility/php-compatibility" />
     <config name="testVersion" value="8.1-"/>
 

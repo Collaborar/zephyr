@@ -1,6 +1,6 @@
 <?php
 
-namespace WPZephyrTestTools;
+namespace ZephyrTestTools;
 
 class TestService
 {

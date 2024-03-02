@@ -1,11 +1,11 @@
 <?php
 
-namespace WPZephyrTests\Application;
+namespace ZephyrTests\Application;
 
 use BadMethodCallException;
-use WPZephyr\Application\ApplicationTrait;
-use WPZephyr\Exceptions\ApplicationException;
-use WPZephyrTestTools\TestCase;
+use Zephyr\Application\ApplicationTrait;
+use Zephyr\Exceptions\ApplicationException;
+use ZephyrTestTools\TestCase;
 
 class ApplicationTraitTest extends TestCase
 {

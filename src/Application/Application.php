@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\Application;
+namespace Zephyr\Application;
 
 use DI\Container;
-use WPZephyr\Exceptions\ApplicationException;
+use Zephyr\Exceptions\ApplicationException;
 
 /**
  * Application.
@@ -62,7 +62,7 @@ class Application
         $this->bootstrapped = true;
         $container = $this->container();
 
-        $this->container()->set(WPZEPHYR_CONFIG_KEY, $config);
+        $this->container()->set(ZEPHYR_CONFIG_KEY, $config);
         $this->loadProviders($container);
     }
 

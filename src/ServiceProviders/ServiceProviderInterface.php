@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\ServiceProviders;
+namespace Zephyr\ServiceProviders;
 
 use DI\Container;
 

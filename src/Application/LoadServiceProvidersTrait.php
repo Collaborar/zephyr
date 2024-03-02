@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\Application;
+namespace Zephyr\Application;
 
 use DI\Container;
-use WPZephyr\Exceptions\ApplicationException;
-use WPZephyr\ServiceProviders\ServiceProviderInterface;
-use WPZephyr\Support\Arr;
+use Zephyr\Exceptions\ApplicationException;
+use Zephyr\ServiceProviders\ServiceProviderInterface;
+use Zephyr\Support\Arr;
 
 /**
  * Load Service Providers
@@ -32,9 +32,9 @@ trait LoadServiceProvidersTrait
      */
     protected function loadProviders(Container $container): void
     {
-        $config = $container->get(WPZEPHYR_CONFIG_KEY);
+        $config = $container->get(ZEPHYR_CONFIG_KEY);
         $container->set(
-            WPZEPHYR_SERVICE_PROVIDERS_KEY,
+            ZEPHYR_SERVICE_PROVIDERS_KEY,
             array_merge(
                 $this->serviceProviders,
                 Arr::get($config, 'providers', [])
@@ -58,7 +58,7 @@ trait LoadServiceProvidersTrait
 
                 return $container->get($provider);
             },
-            $container->get(WPZEPHYR_SERVICE_PROVIDERS_KEY)
+            $container->get(ZEPHYR_SERVICE_PROVIDERS_KEY)
         );
 
         $this->execRegister($serviceProviders, $container);

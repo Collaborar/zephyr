@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\Application;
+namespace Zephyr\Application;
 
 use DI\Container;
 

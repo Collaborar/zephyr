@@ -3,10 +3,10 @@
 /**
  * Service container keys.
  */
-if (!defined('WPZEPHYR_CONFIG_KEY')) {
-    define('WPZEPHYR_CONFIG_KEY', 'wpzephyr.config');
+if (!defined('ZEPHYR_CONFIG_KEY')) {
+    define('ZEPHYR_CONFIG_KEY', 'zephyr.config');
 }
 
-if (!defined('WPZEPHYR_SERVICE_PROVIDERS_KEY')) {
-    define('WPZEPHYR_SERVICE_PROVIDERS_KEY', 'wpzephyr.service_providers');
+if (!defined('ZEPHYR_SERVICE_PROVIDERS_KEY')) {
+    define('ZEPHYR_SERVICE_PROVIDERS_KEY', 'zephyr.service_providers');
 }

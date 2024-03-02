@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\Application;
+namespace Zephyr\Application;
 
 use DI\Container;
-use WPZephyr\ServiceProviders\ExtendsConfigTrait;
-use WPZephyr\ServiceProviders\ServiceProviderInterface;
+use Zephyr\ServiceProviders\ExtendsConfigTrait;
+use Zephyr\ServiceProviders\ServiceProviderInterface;
 
 /**
  * Application Service Provider.

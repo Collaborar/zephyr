@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\Exceptions;
+namespace Zephyr\Exceptions;
 
 use Exception as PhpException;
 

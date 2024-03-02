@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace WPZephyr\ServiceProviders;
+namespace Zephyr\ServiceProviders;
 
 use DI\Container;
-use WPZephyr\Support\Arr;
+use Zephyr\Support\Arr;
 
 /**
  * Allows objects to extend the config.
@@ -56,14 +56,14 @@ trait ExtendsConfigTrait
      */
     public function extendConfig(Container $container, string $key, mixed $default): void
     {
-        $config = $container->get(WPZEPHYR_CONFIG_KEY);
+        $config = $container->get(ZEPHYR_CONFIG_KEY);
         $config = isset($config) ? $config : [];
         $config = Arr::get($config, $key, $default);
 
         $container->set(
-            WPZEPHYR_CONFIG_KEY,
+            ZEPHYR_CONFIG_KEY,
             array_merge(
-                $container->get(WPZEPHYR_CONFIG_KEY),
+                $container->get(ZEPHYR_CONFIG_KEY),
                 [$key => $this->replaceConfig($default, $config)]
             )
         );
