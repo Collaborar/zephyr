@@ -1,8 +1,6 @@
 <?php
 
 /**
-<<<<<<< HEAD
-=======
  * Current version.
  */
 if ( ! defined( 'ZEPHYR_VERSION' ) ) {
@@ -10,7 +8,6 @@ if ( ! defined( 'ZEPHYR_VERSION' ) ) {
 }
 
 /**
->>>>>>> application
  * Service container keys.
  */
 if (!defined('ZEPHYR_CONFIG_KEY')) {
