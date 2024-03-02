@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Zephyr">
+    <description>Zephyr Coding Standard</description>
+    <config name="installed_paths" value="vendor/phpcompatibility/php-compatibility" />
+    <config name="testVersion" value="8.1-"/>
+
+    <arg name="warning-severity" value="0" />
+
+    <!-- Files -->
+    <file>./src</file>
+    <file>./config.php</file>
+
+    <exclude-pattern>tests/*</exclude-pattern>
+    <exclude-pattern>src/Support/*</exclude-pattern>
+    <exclude-pattern>src/Exceptions/Whoops/views/*</exclude-pattern>
+
+    <!-- Definindo o padrão Symfony -->
+    <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony"/>
+</ruleset>
