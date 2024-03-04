@@ -4,3 +4,4 @@
 # tools
 .phpunit.cache
 .phpcs.cache
+.psalm.cache

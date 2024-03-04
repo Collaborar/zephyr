@@ -18,5 +18,6 @@
     <!-- Symfony rules -->
     <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony">
         <exclude name="Symfony.Functions.Arguments.Invalid" />
+        <exclude name="Symfony.Commenting.License.Warning" />
     </rule>
 </ruleset>

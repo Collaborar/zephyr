@@ -14,18 +14,18 @@ trait HasContainerTrait
     /**
      * The container.
      *
-     * @var Container|null
+     * @var Container
      */
-    protected ?Container $container = null;
+    protected Container $container;
 
     /**
      * Define the container.
      *
-     * @param Container|null $container
+     * @param Container $container
      *
      * @return void
      */
-    public function setContainer(?Container $container): void
+    public function setContainer(Container $container): void
     {
         $this->container = $container;
     }

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Zephyr\Helpers;
 
+use Zephyr\Exceptions\ClassNotFoundException;
+
 /**
  * Mixed Type
  */
@@ -73,6 +75,13 @@ class MixedType
      */
     public static function instantiate(string $class): object
     {
+        if (!class_exists($class)) {
+            throw new ClassNotFoundException(sprintf(
+                'Class not found: %s',
+                $class
+            ));
+        }
+
         return new $class();
     }
 
