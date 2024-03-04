@@ -3,8 +3,8 @@
 /**
  * Current version.
  */
-if ( ! defined( 'ZEPHYR_VERSION' ) ) {
-	define( 'ZEPHYR_VERSION', '1.0.0' );
+if (!defined('ZEPHYR_VERSION')) {
+    define('ZEPHYR_VERSION', '1.0.0');
 }
 
 /**

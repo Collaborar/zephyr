@@ -5,6 +5,7 @@
     <config name="testVersion" value="8.1-"/>
 
     <arg name="warning-severity" value="0" />
+    <arg name="cache" value=".phpcs.cache" />
 
     <!-- Files -->
     <file>./src</file>
@@ -14,6 +15,8 @@
     <exclude-pattern>src/Support/*</exclude-pattern>
     <exclude-pattern>src/Exceptions/Whoops/views/*</exclude-pattern>
 
-    <!-- Definindo o padrão Symfony -->
-    <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony"/>
+    <!-- Symfony rules -->
+    <rule ref="vendor/escapestudios/symfony2-coding-standard/Symfony">
+        <exclude name="Symfony.Functions.Arguments.Invalid" />
+    </rule>
 </ruleset>
