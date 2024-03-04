@@ -16,7 +16,7 @@
     ],
     "scripts": {
         "prod": "composer install --no-dev --classmap-authoritative --optimize-autoloader",
-        "check": "psalm",
+        "check": "psalm --show-info=true",
         "check:fix": "psalm --alter --issues=InvalidNullableReturnType --dry-run",
         "lint": "phpcs",
         "lint:fix": "phpcbf",
