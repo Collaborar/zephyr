@@ -9,6 +9,8 @@ use Zephyr\ServiceProviders\ServiceProviderInterface;
 
 /**
  * Provide Filesystem dependencies.
+ *
+ * @todo Remove it from ignoreFiles on Psalm.
  */
 class FilesystemServiceProvider implements ServiceProviderInterface
 {

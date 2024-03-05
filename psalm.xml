@@ -14,6 +14,7 @@
         <ignoreFiles>
             <file name="src/Application/ApplicationMixin.php" />
             <file name="src/Support/Arr.php" />
+            <file name="src/Filesystem/FilesystemServiceProvider.php" />
         </ignoreFiles>
     </projectFiles>
 </psalm>
