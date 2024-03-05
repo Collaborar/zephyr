@@ -6,6 +6,7 @@ namespace Zephyr\Application;
 
 use DI\Container;
 use Zephyr\Exceptions\ApplicationException;
+use Zephyr\Filesystem\FilesystemServiceProvider;
 use Zephyr\ServiceProviders\ServiceProviderInterface;
 use Zephyr\Support\Arr;
 
@@ -21,6 +22,7 @@ trait LoadServiceProvidersTrait
      */
     protected array $serviceProviders = [
         ApplicationServiceProvider::class,
+        FilesystemServiceProvider::class,
     ];
 
     /**

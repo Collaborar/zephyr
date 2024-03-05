@@ -1,12 +1,13 @@
 <?php
 
-class ZephyrTestsBootstrap {
+class ZephyrTestsBootstrap
+{
 	/**
 	 * The bootstrap instance.
 	 *
 	 * @var ZephyrTestsBootstrap
 	 */
-	protected static $instance = null;
+	protected static ?ZephyrTestsBootstrap $instance = null;
 
 	/**
 	 * Testing directory.

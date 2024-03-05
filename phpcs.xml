@@ -12,6 +12,7 @@
     <file>./config.php</file>
 
     <exclude-pattern>tests/*</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
     <exclude-pattern>src/Support/*</exclude-pattern>
     <exclude-pattern>src/Exceptions/Whoops/views/*</exclude-pattern>
 
