@@ -8,6 +8,7 @@
     cacheDirectory=".psalm.cache"
     allowStringToStandInForClass="true"
 >
+    <!-- Project settings -->
     <projectFiles>
         <directory name="src"/>
 
@@ -16,4 +17,14 @@
             <file name="src/Support/Arr.php" />
         </ignoreFiles>
     </projectFiles>
+
+    <!-- Handle Issues -->
+    <issueHandlers>
+        <MissingFile name="/wp-admin/includes/file.php" errorLevel="suppress" />
+    </issueHandlers>
+
+    <!-- Enable Plugins -->
+    <plugins>
+        <pluginClass class="PsalmWordPress\Plugin" />
+    </plugins>
 </psalm>
