@@ -3,7 +3,7 @@
     "name": "collaborar/zephyr",
     "version": "1.0.0-beta",
     "type": "library",
-    "license": "GPL-3.O-only",
+    "license": "GPL-3.0-only",
     "keywords": [
         "wordpress",
         "framework",
